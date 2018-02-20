@@ -1,10 +1,15 @@
 // changeCasse.cpp
 // g++ -std=c++11 -Wall -Wextra -o changeCasse.out changeCasse.cpp
+#include <sstream>
 #include <cctype>
 #include <iostream>
+
+std::ostringstream ss;
+std::cin.rdbuf(); 
+std::string texte = ss.str();
+
 int main()
 {
-    std::string texte = "Toto, Tata";
     // change les minuscules par des majuscules et réciproquement
     for (char & c : texte)
     {
